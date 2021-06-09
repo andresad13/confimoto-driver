@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <fragment
+        android:id="@+id/fragmentMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_picker"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/servicios_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:cardCornerRadius="10dp"
+      android:layout_alignParentBottom="true">
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="12dp"
+          android:orientation="vertical">
+
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:text="Servicios disponibles"
+              android:textSize="18dp"
+              android:gravity="center|top"
+              android:fontFamily="@font/montserratalternatesregular"
+              android:layout_weight="1"/>
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1.9"
+              android:orientation="horizontal">
+
+              <ImageView
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:src="@drawable/com_facebook_profile_picture_blank_portrait"/>
+
+              <LinearLayout
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:text="origen"
+                      android:textSize="18dp"
+                      android:gravity="center|top"
+                      android:fontFamily="@font/montserratalternatesregular"
+                      android:layout_weight="1"/>
+
+                  <TextView
+                      android:id="@+id/text_origen"
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:text=""
+                      android:textSize="12dp"
+                      android:gravity="center|top"
+                      android:fontFamily="@font/montserratalternatesregular"
+                      android:layout_weight="1"/>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:text="destino"
+                      android:textSize="18dp"
+                      android:gravity="center|top"
+                      android:fontFamily="@font/montserratalternatesregular"
+                      android:layout_weight="1"/>
+                  <TextView
+                      android:id="@+id/text_destino"
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:text=""
+                      android:textSize="12dp"
+                      android:gravity="center|top"
+                      android:fontFamily="@font/montserratalternatesregular"
+                      android:layout_weight="1"/>
+
+              </LinearLayout>
+
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="0.3"
+              android:orientation="horizontal">
+
+
+          </LinearLayout>
+
+          <Button
+              android:id="@+id/butt_tomar_servicio"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="0.8"
+              android:text="Tomar"
+              android:fontFamily="@font/montserratalternatesregular"
+
+              android:textColor="@android:color/white"
+
+              android:background="@drawable/ic_button_blue"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"/>
+
+
+          <Space
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+      </LinearLayout>
+
+
+
+  </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!--   segundo  -->
+
+    <LinearLayout
+        android:id="@+id/encamino_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_alignParentBottom="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="Servicio actual"
+                    android:textSize="18dp"
+                    android:gravity="center|top"
+                    android:fontFamily="@font/montserratalternatesregular"
+                    android:layout_weight="1"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.9"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:src="@drawable/com_facebook_profile_picture_blank_portrait"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="origen"
+                            android:textSize="18dp"
+                            android:gravity="center|top"
+                            android:fontFamily="@font/montserratalternatesregular"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/text_origen1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text=""
+                            android:textSize="12dp"
+                            android:gravity="center|top"
+                            android:fontFamily="@font/montserratalternatesregular"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="destino"
+                            android:textSize="18dp"
+                            android:gravity="center|top"
+                            android:fontFamily="@font/montserratalternatesregular"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/text_destino1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text=""
+                            android:textSize="12dp"
+                            android:gravity="center|top"
+                            android:fontFamily="@font/montserratalternatesregular"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_baseline_chat"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_baseline_call_24"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/butt_tomar_servicio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:text="he llegado!"
+                    android:fontFamily="@font/montserratalternatesregular"
+
+                    android:textColor="@android:color/white"
+
+                    android:background="@drawable/ic_button_blue"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!--   segundo  -->
+
+
+
+
+</RelativeLayout>
